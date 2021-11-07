@@ -110,12 +110,6 @@
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Feature\code\GreenStreet.Feature.Navigation.csproj">
-      <Project>{f42388fd-29a5-49bf-bf51-e77833f19b96}</Project>
-      <Name>GreenStreet.Feature.Navigation</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
