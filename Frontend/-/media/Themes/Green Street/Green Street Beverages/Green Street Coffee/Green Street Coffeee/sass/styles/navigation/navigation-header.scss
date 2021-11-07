@@ -1,0 +1,67 @@
+@import "../../abstracts/vars";
+@import "../../abstracts/mixins";
+@import "../../base/fontawesome/font-awesome-mix-var";
+
+
+#header {
+    display: contents; 
+	position: relative;
+	z-index: 1010;	
+    .row-fluid{
+        display: contents;
+    }
+
+	.search {
+		padding: 25px;
+		.qs_s {
+			position: relative;
+			#query {
+				background-color: #f0f0f0;
+				border: #d7d7d7;
+				padding: 4px 14px;
+				margin-bottom: 0;
+				width: 100%;
+				height: 30px;			
+				box-sizing: border-box;		
+				border-radius: 9999px;
+				background-clip: padding-box;			
+				box-shadow: inset 0 1px 2px rgba(71, 73, 72, 0.19999999999999996);
+				&:focus {
+					background-color: #f6f6f6;					
+					box-shadow: inset 0 1px 2px rgba(71, 73, 72, 0.19999999999999996);
+				}
+			}
+			input[type="submit"] {
+				display: none;
+			}
+		}		
+	}
+}
+
+.mini-cart {
+	padding: 20px 0;
+	a {
+		display: block;
+		line-height: 40px;
+		float: right;
+		height: 40px;
+		width: 40px;
+		background: url(../images/cart.png) no-repeat left center;
+		position: relative;
+		>span {
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			line-height: 20px;
+			font-size: 11px;
+			text-align: center;
+			background-color: #1abc9c;
+			color: #ffffff;
+			position: absolute;
+			top: 0;
+			right: 0px;		
+			border-radius: 12px;
+			background-clip: padding-box;
+		}
+	}
+}

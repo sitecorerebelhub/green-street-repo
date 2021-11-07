@@ -1,0 +1,39 @@
+/* breakpoints */
+.social-media-share {
+  background: transparent;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.social-media-share > .component-content ul {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.social-media-share > .component-content ul li {
+  height: 20px;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+  margin: 15px;
+}
+
+.social-media-share > .component-content ul li:first-child {
+  margin-left: 0;
+}
+
+.social-media-share > .component-content ul li .fb_iframe_widget {
+  display: block;
+  margin-top: -2px;
+}

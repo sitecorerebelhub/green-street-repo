@@ -1,0 +1,137 @@
+@import "../../abstracts/vars";
+@import "../../abstracts/mixins";
+@import "../../base/fontawesome/font-awesome-mix-var";
+
+.navigation-main-gsc{
+  	background-color: #ffffff;
+	padding: 0;	
+    box-shadow: 0 1px 2px rgba(71, 73, 72, 0.19999999999999996);
+    .hidden-desktop{
+        display: none;
+    }
+	&:before {
+		content: '';
+		display: block;
+	}
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+    }
+    nav.navigation {
+        background-color: #fbfbf9;
+        z-index: 1000;      
+        .container{
+            margin-left: 200px;
+        }
+    }
+    nav.navigation.sticky{
+        position: fixed !important;
+        top: 0;
+        width: 100vw;
+    }
+    .main-menu {            
+        li {
+            list-style: none;
+            position: relative;
+            ul {
+                display: none;
+                position: absolute;
+                border-top: 5px solid #1abc9c;
+                background-color: #ffffff;
+                margin: 0;
+                border-radius: 2px;
+                background-clip: padding-box;              
+                box-shadow: 0 1px 2px rgba(71, 73, 72, 0.25);
+                z-index: 1000;
+                min-width: 200px;
+                li {
+                    a {
+                        padding: 15px 20px;
+                        border-top: 1px solid #f0f0f0;
+                        color: #474948;
+                    }
+                    ul {
+                        left: 190px;
+                        top: 10px;
+                    }
+                }
+                li.menu-item-has-children {
+                    >a {
+                        &:before {
+                            font-family: fontAwesome;
+                            content: "\f0da";
+                            float: right;
+                            color: #474948;
+                        }
+                    }
+                }
+            }
+            &:hover {
+                >a {
+                    background-color: #1abc9c;
+                    color: #ffffff;
+                }
+                >ul {
+                    display: block;
+                }
+            }
+            &:hover.menu-item-has-children {
+                >a {
+                    &:before {
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+        a {
+            text-decoration: none;
+            font-size: 12px;
+            display: block;
+        }
+        >li {
+            float: left;
+            >ul {
+                left: -9999px;
+                top: -9999px;
+            }
+            >a {
+                padding: 15px 30px 15px 0 !important;
+                color: #606362;
+                text-transform: uppercase;
+                &:hover {
+                    color: #1abc9c;
+                    background: none;
+                }
+            }
+            &:hover {
+                >a {
+                    color: #1abc9c;
+                    background: none;
+                }
+            }
+        }            
+    }
+    @media (max-width: 768px) {
+        nav.navigation.visible-desktop{            
+            display: none;
+        }
+        nav.navigation.hidden-desktop{
+            display: block;
+            background-color: #1abc9c;
+        }       
+    }
+    @media only screen and (min-width: 979px) {
+        .main-menu {
+            >li {
+                &:hover {
+                    >ul {
+                        left: 0px;
+                        top: 50px;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

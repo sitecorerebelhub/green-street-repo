@@ -1,0 +1,35 @@
+﻿@using Sitecore.XA.Feature.Navigation.Models
+@using Sitecore.XA.Foundation.RenderingVariants.Extensions
+@using Sitecore.XA.Foundation.SitecoreExtensions.Extensions
+@using Sitecore.XA.Foundation.Variants.Abstractions.Fields
+@model NavigationExtendedModel
+
+
+@{
+    var ulclass = (Model.RelativeLevel == 1) ? "main-menu" : "sub-menu";
+    var ulid = (Model.RelativeLevel == 1) ? "menu-sidebar" : "sub-menu-sidebar";
+}
+<ul id="@ulid" class="@ulclass">
+    @foreach (var item in Model.Children)
+    {
+        <li class="menu-item">
+            @{
+                foreach (BaseVariantField variantField in item.VariantFields)
+                {
+                    if (item.IsFake)
+                    {
+                        @Html.RenderingVariants().RenderVariant(variantField, item.PageItem, item.IsControlEditable, Model, (fakeItem, s) => "#")
+                    }
+                    else
+                    {
+                        @Html.RenderingVariants().RenderVariant(variantField, item.PageItem, item.IsControlEditable, Model)
+                    }
+                }
+                if (item.Children != null && item.Children.Any())
+                {
+                    Html.RenderPartial("~/SXAView_Overrides/Views/Navigation/NavigationLevel.cshtml", new NavigationExtendedModel { Children = item.Children, RelativeLevel = Model.RelativeLevel + 1 });
+                }
+            }
+        </li>
+    }
+</ul>

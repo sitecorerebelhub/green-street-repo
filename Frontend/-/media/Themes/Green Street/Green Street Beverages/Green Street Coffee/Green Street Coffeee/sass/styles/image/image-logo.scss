@@ -1,0 +1,17 @@
+@import "../../abstracts/vars";
+@import "../../abstracts/mixins";
+@import "../../base/fontawesome/font-awesome-mix-var";
+
+.image-logo {
+    padding: 10px 0;
+    margin-left: 2rem;
+    a {
+        display: inline-block;
+        height: 60px;
+        text-decoration: none;
+    }
+    img {
+        max-height: 100%;
+        width: auto;
+    }
+}
