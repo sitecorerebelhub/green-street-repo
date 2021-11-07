@@ -1,7 +1,6 @@
 # Green Street Repositary
 
-Green Street is an Sitecore solution using SXA built on the Helix architecture principles. It is designed to show how a navigation component can be implemented using SXA based on requirement.
-
+Green Street is an Sitecore solution using SXA built on the Helix architecture principles. It is designed to show how a navigation component can be implemented using SXA.
 ## Following points has been implemented based on requirement:
 
 1. Build Header Navigation
