@@ -9,7 +9,7 @@ Green Street is an Sitecore solution using SXA built on the Helix architecture p
     - Navigation filter should be possible i.e. Show/Hide an item
     - Navigation should be rendered across the website.
 2. Build Top Navigation 
-    - Buil Company Logo
+    - Build Company Logo
     - Navigate to homepage on logo click
     - Static View for Search bar and Basket Icon
     
