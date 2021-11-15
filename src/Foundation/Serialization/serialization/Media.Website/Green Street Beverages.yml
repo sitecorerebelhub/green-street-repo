@@ -1,0 +1,14 @@
+﻿---
+ID: "6d42d8ee-e217-4919-89c3-d48369dc7caf"
+Parent: "ed2d82e2-d47e-4ff1-826f-4044420c97d5"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Project/Green Street/Green Street Beverages
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211030T105004Z
