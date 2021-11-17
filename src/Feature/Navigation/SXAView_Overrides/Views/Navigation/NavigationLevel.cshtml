@@ -1,13 +1,12 @@
 ﻿@using Sitecore.XA.Feature.Navigation.Models
 @using Sitecore.XA.Foundation.RenderingVariants.Extensions
-@using Sitecore.XA.Foundation.SitecoreExtensions.Extensions
 @using Sitecore.XA.Foundation.Variants.Abstractions.Fields
 @model NavigationExtendedModel
 
 
 @{
-    var ulclass = (Model.RelativeLevel == 1) ? "main-menu" : "sub-menu";
-    var ulid = (Model.RelativeLevel == 1) ? "menu-sidebar" : "sub-menu-sidebar";
+    var ulclass = Model.RelativeLevel == 1 ? "main-menu" : "sub-menu";
+    var ulid = Model.RelativeLevel == 1 ? "menu-sidebar" : "sub-menu-sidebar";
 }
 <ul id="@ulid" class="@ulclass">
     @foreach (var item in Model.Children)
